@@ -1,9 +1,13 @@
 import React from "react";
 import dynamic from 'next/dynamic';
+import { useWallet } from "@solana/wallet-adapter-react";
+
 // Constants
 const TWITTER_HANDLE= "hopisaurus";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TWITTER_LOGO = "twitter-logo.svg";
+
+
 
 const WalletMultiButton = dynamic(
     async () => 
@@ -13,10 +17,9 @@ const WalletMultiButton = dynamic(
 
 const Home = () => {
     // actions for phantom
+    const wallet = useWallet();
     const renderNotConnectedContainer = () => (
         <div>
-            <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
-
             <div className="button-container">
                 <WalletMultiButton className="cta-button connect-wallet-button" />
             </div>
@@ -27,10 +30,13 @@ const Home = () => {
         <div className="App">
             <div className="container">
                 <div className="header-container">
-                    <p className="header">🍭 Candy Drop</p>
-                    <p className="sub-text">NFT drop machine with fair mint</p>
+                    <p className="header">🎵 I'll take you to the candy shop</p>
+                    <p className="sub-text">go 'head, drop an NFT like it's hot!</p>
+                    <img src="https://media.giphy.com/media/sQuHLqjWwRXGvrjkg0/giphy.gif" alt="emoji" />
                     {/* Render your connect to wallet button right here */}
-                    {renderNotConnectedContainer()}
+                    <div>
+                        {wallet.publicKey ? <div><p className="sub-text-1">🌞 Bonjour! ✌ Mi Amigo 🌊</p></div> : renderNotConnectedContainer()}
+                    </div>
                 </div>
                 <div className="footer-container">
                     <img alt="Twitter Logo" className="twitter-logo" src={TWITTER_LOGO} />
