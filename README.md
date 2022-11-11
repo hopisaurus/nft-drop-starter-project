@@ -13,3 +13,5 @@ If you use VSCode to build your app, we included a list of suggested extensions 
 ### Questions?
 Have some questions make sure you head over to your [buildspace Dashboard](https://app.buildspace.so/projects/CO77556be5-25e9-49dd-a799-91a2fc29520e) and link your Discord account so you can get access to helpful channels and your instructor!
 
+#### Source Project
+[Link to project](https://buildspace.so/p/ship-solana-nft-collection/lessons/deploy-nfts-to-solana-devnet)
