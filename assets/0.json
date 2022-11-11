@@ -1,0 +1,32 @@
+{
+    "name": "APEToes #01",
+    "symbol": "APT",
+    "description": "Collection of different Ape's Toes.",
+    "image": "0.png",
+    "attributes": [
+      {
+        "trait_type": "Number of Toes",
+        "value": "5"
+      },
+      {
+      "trait_type": "Toe Polish",
+      "value": "Pink"
+      },
+      {
+        "trait_type": "Fur Color",
+        "value": "Brown"
+      },
+      {
+        "trait_type": "Fur Type",
+        "value": "Fuzzy"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

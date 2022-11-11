@@ -1,0 +1,20 @@
+{
+    "name": "APEToes #04",
+    "symbol": "APT",
+    "description": "Collection of different Ape's Toes.",
+    "image": "3.png",
+    "attributes": [
+      {
+        "trait_type": "Number of Toes",
+        "value": "5"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "3.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }
