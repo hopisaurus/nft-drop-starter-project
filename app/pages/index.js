@@ -1,13 +1,12 @@
 import React from "react";
 import dynamic from 'next/dynamic';
+import CandyMachine from "../components/CandyMachine"
 import { useWallet } from "@solana/wallet-adapter-react";
 
 // Constants
 const TWITTER_HANDLE= "hopisaurus";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TWITTER_LOGO = "twitter-logo.svg";
-
-
 
 const WalletMultiButton = dynamic(
     async () => 
@@ -35,7 +34,8 @@ const Home = () => {
                     <img src="https://media.giphy.com/media/sQuHLqjWwRXGvrjkg0/giphy.gif" alt="emoji" />
                     {/* Render your connect to wallet button right here */}
                     <div>
-                        {wallet.publicKey ? <div><p className="sub-text-1">🌞 Bonjour! ✌ Mi Amigo 🌊</p></div> : renderNotConnectedContainer()}
+                    {wallet.publicKey ? <CandyMachine walletAddress={wallet} /> : renderNotConnectedContainer()}
+                    {/* {wallet.publicKey ? <div><p className="sub-text-1">🌞 Bonjour! ✌ Mi Amigo 🌊</p><CandyMachine walletAddress={wallet} /></div> : renderNotConnectedContainer()} */}
                     </div>
                 </div>
                 <div className="footer-container">
